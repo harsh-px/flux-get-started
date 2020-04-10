@@ -1,7 +1,7 @@
 apiVersion: autopilot.libopenstorage.org/v1alpha1
 kind: AutopilotRuleObject
 metadata:
-  creationTimestamp: "2020-04-10T22:24:54Z"
+  creationTimestamp: "2020-04-10T22:50:43Z"
   generation: 2
   labels:
     rule: volume-resize
@@ -12,14 +12,14 @@ metadata:
     controller: true
     kind: AutopilotRule
     name: volume-resize
-    uid: 03367804-3cf3-4f6b-9a7b-a77004e74901
-  resourceVersion: "2378767"
+    uid: 2563ba1d-dcc9-4186-a3a2-e90d9cc8cb77
+  resourceVersion: "2383693"
   selfLink: /apis/autopilot.libopenstorage.org/v1alpha1/autopilotruleobjects/pvc-d94b06a1-c88c-42d4-a494-99f1c43c0915
-  uid: f01e3b93-f211-48f9-a533-b6e943fde72a
+  uid: 97d2083f-7693-4180-8a7f-0e295781be07
 spec:
   actionApprovals:
   - action:
-      expectedResult: PVC will resize from 10Gi to 20Gi
+      expectedResult: PVC will resize from 20Gi to 40Gi
       name: openstorage.io.action.volume/resize
       objectMetadata:
         annotations:
@@ -28,6 +28,7 @@ spec:
           rule: volume-resize
           ruleobject: pvc-d94b06a1-c88c-42d4-a494-99f1c43c0915
           volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/portworx-volume
+          volume.kubernetes.io/storage-resizer: kubernetes.io/portworx-volume
         creationTimestamp: null
         labels:
           app: postgres
@@ -47,11 +48,11 @@ spec:
     state: approved
 status:
   items:
-  - lastProcessTimestamp: "2020-04-10T22:24:54Z"
+  - lastProcessTimestamp: "2020-04-10T22:50:43Z"
     message: 'rule: volume-resize:pvc-d94b06a1-c88c-42d4-a494-99f1c43c0915 transition
       from Normal => Triggered'
     state: Triggered
-  - lastProcessTimestamp: "2020-04-10T22:25:08Z"
+  - lastProcessTimestamp: "2020-04-10T22:50:57Z"
     message: 'rule: volume-resize:pvc-d94b06a1-c88c-42d4-a494-99f1c43c0915 transition
       from Triggered => ActionAwaitingApproval'
     state: ActionAwaitingApproval
