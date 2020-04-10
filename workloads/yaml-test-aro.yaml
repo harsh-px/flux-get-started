@@ -1,0 +1,56 @@
+apiVersion: autopilot.libopenstorage.org/v1alpha1
+kind: AutopilotRuleObject
+metadata:
+  creationTimestamp: null
+  labels:
+    rule: yaml-test-rule
+  name: yaml-test-aro
+  ownerReferences:
+  - apiVersion: autopilot.libopenstorage.org/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: AutopilotRule
+    name: yaml-test-rule
+    uid: 0ee54b8b-de2c-4ae0-8d29-025da71cdafb
+spec:
+  actionApprovals:
+  - action:
+      expectedResult: PVC will resize from 10 GiB to 20 GiB
+      name: openstorage.io.action.volume/resize
+      objectMetadata:
+        annotations:
+          rule: aut-test-rule
+          ruleobject: pvc-d94b06a1-c88c-42d4-a494-99f1c43c0915
+        creationTimestamp: null
+        labels:
+          type: db
+        name: postgres-pvc
+        namespace: postgres-ns
+        ownerReferences:
+        - apiVersion: apps/v1
+          controller: true
+          kind: Deployment
+          name: postgres
+          uid: ""
+        uid: pvc-d94b06a1-c88c-42d4-a494-99f1c43c0915
+      params:
+        maxsize: 400Gi
+        scalepercentage: "100"
+    state: approved
+status:
+  items:
+  - lastProcessTimestamp: "2020-04-10T21:58:49Z"
+    message: random 0 message
+    state: Normal
+  - lastProcessTimestamp: "2020-04-10T21:58:49Z"
+    message: random 1 message
+    state: Normal
+  - lastProcessTimestamp: "2020-04-10T21:58:49Z"
+    message: random 2 message
+    state: Normal
+  - lastProcessTimestamp: "2020-04-10T21:58:49Z"
+    message: random 3 message
+    state: Normal
+  - lastProcessTimestamp: "2020-04-10T21:58:49Z"
+    message: random 4 message
+    state: Normal
