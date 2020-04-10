@@ -1,7 +1,7 @@
 apiVersion: autopilot.libopenstorage.org/v1alpha1
 kind: AutopilotRuleObject
 metadata:
-  creationTimestamp: "2020-04-10T19:57:58Z"
+  creationTimestamp: "2020-04-10T20:56:04Z"
   generation: 2
   labels:
     rule: volume-resize
@@ -12,10 +12,10 @@ metadata:
     controller: true
     kind: AutopilotRule
     name: volume-resize
-    uid: 99f6a7be-cd55-436d-b6d7-e1d201c3bef5
-  resourceVersion: "2351770"
+    uid: 2bd7b93d-c57b-4e56-ba43-c1d31368f3c8
+  resourceVersion: "2362418"
   selfLink: /apis/autopilot.libopenstorage.org/v1alpha1/autopilotruleobjects/pvc-d94b06a1-c88c-42d4-a494-99f1c43c0915
-  uid: 87b5787b-6e66-46c0-861c-81821972a34c
+  uid: cc04d4da-1bd0-4b8b-a894-5a27b180884b
 spec:
   actionApprovals:
   - action:
@@ -47,11 +47,11 @@ spec:
     state: approved
 status:
   items:
-  - lastProcessTimestamp: "2020-04-10T19:57:58Z"
+  - lastProcessTimestamp: "2020-04-10T20:56:04Z"
     message: 'rule: volume-resize:pvc-d94b06a1-c88c-42d4-a494-99f1c43c0915 transition
       from Normal => Triggered'
     state: Triggered
-  - lastProcessTimestamp: "2020-04-10T19:58:12Z"
+  - lastProcessTimestamp: "2020-04-10T20:56:18Z"
     message: 'rule: volume-resize:pvc-d94b06a1-c88c-42d4-a494-99f1c43c0915 transition
       from Triggered => ActionAwaitingApproval'
     state: ActionAwaitingApproval
