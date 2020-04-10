@@ -11,7 +11,7 @@ metadata:
     controller: true
     kind: AutopilotRule
     name: yaml-test-rule
-    uid: 12a43a5c-df07-435f-855e-2dd5dfb380c5
+    uid: 8ff68f5a-98a5-4b77-aa39-3504be4f8e43
 spec:
   actionApprovals:
   - action:
@@ -39,18 +39,18 @@ spec:
     state: pending
 status:
   items:
-  - lastProcessTimestamp: "2020-04-10T17:35:11Z"
+  - lastProcessTimestamp: "2020-04-10T17:43:40Z"
     message: random 0 message
     state: Normal
-  - lastProcessTimestamp: "2020-04-10T17:35:11Z"
+  - lastProcessTimestamp: "2020-04-10T17:43:40Z"
     message: random 1 message
     state: Normal
-  - lastProcessTimestamp: "2020-04-10T17:35:11Z"
+  - lastProcessTimestamp: "2020-04-10T17:43:40Z"
     message: random 2 message
     state: Normal
-  - lastProcessTimestamp: "2020-04-10T17:35:11Z"
+  - lastProcessTimestamp: "2020-04-10T17:43:40Z"
     message: random 3 message
     state: Normal
-  - lastProcessTimestamp: "2020-04-10T17:35:11Z"
+  - lastProcessTimestamp: "2020-04-10T17:43:40Z"
     message: random 4 message
     state: Normal
