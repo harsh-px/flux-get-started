@@ -1,0 +1,78 @@
+apiVersion: autopilot.libopenstorage.org/v1alpha1
+kind: AutopilotRuleObject
+metadata:
+  generation: 1
+  labels:
+    rule: pool-expand-dry-run
+  name: 1b957590-60d9-448a-a79b-3c28921dcea5
+  ownerReferences:
+  - apiVersion: autopilot.libopenstorage.org/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: AutopilotRule
+    name: pool-expand-dry-run
+    uid: 74a1c2d7-25f6-4d32-a011-f62ed136a9ae
+  selfLink: /apis/autopilot.libopenstorage.org/v1alpha1/autopilotruleobjects/1b957590-60d9-448a-a79b-3c28921dcea5
+spec:
+  actionApprovals:
+  - action:
+      expectedResult: 'expand storage pool: 1b957590-60d9-448a-a79b-3c28921dcea5 from
+        10 GiB by scalePercentage 100% using scale type: RESIZE_TYPE_RESIZE_DISK'
+      name: openstorage.io.action.storagepool/expand
+      objectMetadata:
+        annotations:
+          rule: pool-expand-dry-run
+          ruleobject: 1b957590-60d9-448a-a79b-3c28921dcea5
+        creationTimestamp: null
+        labels:
+          beta.kubernetes.io/arch: amd64
+          beta.kubernetes.io/os: linux
+          bosh.id: bc657e06-489d-4eea-93a9-3f687f476806
+          bosh.zone: AZ1
+          failure-domain.beta.kubernetes.io/zone: AZ1
+          iopriority: MEDIUM
+          kubernetes.io/arch: amd64
+          kubernetes.io/hostname: 70.0.101.16
+          kubernetes.io/os: linux
+          medium: STORAGE_MEDIUM_MAGNETIC
+          pks-system/cluster.name: harsh-de
+          pks-system/cluster.uuid: service-instance_34104a5b-39fd-4249-8bf9-cd3cbf4a1dc3
+          spec.ip: 70.0.101.16
+        name: 1b957590-60d9-448a-a79b-3c28921dcea5
+      params:
+        scalepercentage: "100"
+    state: pending
+status:
+  items:
+  - lastProcessTimestamp: "2020-04-09T20:57:21Z"
+    message: 'rule: pool-expand-dry-run:1b957590-60d9-448a-a79b-3c28921dcea5 transition
+      from Normal => Triggered'
+    state: Triggered
+  - lastProcessTimestamp: "2020-04-09T20:57:35Z"
+    message: 'rule: pool-expand-dry-run:1b957590-60d9-448a-a79b-3c28921dcea5 transition
+      from Triggered => ActionAwaitingApproval'
+    state: ActionAwaitingApproval
+  - lastProcessTimestamp: "2020-04-09T20:58:43Z"
+    message: 'rule: pool-expand-dry-run:1b957590-60d9-448a-a79b-3c28921dcea5 transition
+      from ActionAwaitingApproval => ActiveActionsPending'
+    state: ActiveActionsPending
+  - lastProcessTimestamp: "2020-04-09T20:58:44Z"
+    message: 'rule: pool-expand-dry-run:1b957590-60d9-448a-a79b-3c28921dcea5 transition
+      from ActiveActionsPending => ActiveActionsInProgress'
+    state: ActiveActionsInProgress
+  - lastProcessTimestamp: "2020-04-09T20:58:44Z"
+    message: 'rule: pool-expand-dry-run:1b957590-60d9-448a-a79b-3c28921dcea5 transition
+      from ActiveActionsInProgress => ActiveActionsTaken'
+    state: ActiveActionsTaken
+  - lastProcessTimestamp: "2020-04-09T21:03:46Z"
+    message: 'rule: pool-expand-dry-run:1b957590-60d9-448a-a79b-3c28921dcea5 transition
+      from ActiveActionsTaken => Normal'
+    state: Normal
+  - lastProcessTimestamp: "2020-04-09T21:03:48Z"
+    message: 'rule: pool-expand-dry-run:1b957590-60d9-448a-a79b-3c28921dcea5 transition
+      from Normal => Triggered'
+    state: Triggered
+  - lastProcessTimestamp: "2020-04-09T21:04:01Z"
+    message: 'rule: pool-expand-dry-run:1b957590-60d9-448a-a79b-3c28921dcea5 transition
+      from Triggered => ActionAwaitingApproval'
+    state: ActionAwaitingApproval
