@@ -1,8 +1,7 @@
 apiVersion: autopilot.libopenstorage.org/v1alpha1
 kind: AutopilotRuleObject
 metadata:
-  creationTimestamp: "2020-04-16T01:24:38Z"
-  generation: 2
+  creationTimestamp: null
   labels:
     rule: volume-resize
   name: pvc-49ff8296-ad37-4af1-b7a8-1f142badb289
@@ -12,10 +11,8 @@ metadata:
     controller: true
     kind: AutopilotRule
     name: volume-resize
-    uid: 13f343fe-800f-4839-9731-92ec51fca1e8
-  resourceVersion: "6709904"
-  selfLink: /apis/autopilot.libopenstorage.org/v1alpha1/autopilotruleobjects/pvc-49ff8296-ad37-4af1-b7a8-1f142badb289
-  uid: a8d3fa09-8eb0-4e76-8e09-8c1f14fb8aa1
+    uid: 9765436f-4244-4355-9a23-b4ef802f6c2f
+  uid: c1f28b33-4722-4777-9f04-ebb831c42434
 spec:
   actionApprovals:
   - action:
