@@ -1,8 +1,11 @@
 apiVersion: autopilot.libopenstorage.org/v1alpha1
 kind: AutopilotRuleObject
 metadata:
+  annotations:
+    fluxcd.io/sync-checksum: 9ff7ab1518b648475a47d9462f84b11c2ae40228
   creationTimestamp: null
   labels:
+    fluxcd.io/sync-gc-mark: sha256.ilzIw4kEFMRb8US7G-u-frnfAOoXailOAXVgPUcZHiw
     rule: volume-resize
   name: pvc-49ff8296-ad37-4af1-b7a8-1f142badb289
   ownerReferences:
