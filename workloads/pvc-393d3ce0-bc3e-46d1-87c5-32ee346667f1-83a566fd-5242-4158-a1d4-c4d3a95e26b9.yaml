@@ -1,0 +1,39 @@
+apiVersion: autopilot.libopenstorage.org/v1alpha1
+kind: AutopilotRuleObject
+metadata:
+  creationTimestamp: null
+  labels:
+    rule: volume-resize
+  name: pvc-393d3ce0-bc3e-46d1-87c5-32ee346667f1
+  ownerReferences:
+  - apiVersion: autopilot.libopenstorage.org/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: AutopilotRule
+    name: volume-resize
+    uid: 498036b9-bd06-42cd-9e23-7bc51f4d9e93
+  uid: 4b7c714d-2af2-4322-823f-422815a677b2
+spec:
+  actionApprovals:
+  - action:
+      expectedResult: PVC will resize from 3Gi to 6Gi
+      name: openstorage.io.action.volume/resize
+      objectMetadata:
+        annotations:
+          kubectl.kubernetes.io/last-applied-configuration: |
+            {"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{},"labels":{"app":"postgres"},"name":"pgbench-data","namespace":"pg1"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"3Gi"}},"storageClassName":"postgres-pgbench-sc"}}
+          rule: volume-resize
+          ruleobject: pvc-393d3ce0-bc3e-46d1-87c5-32ee346667f1
+          volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/portworx-volume
+        creationTimestamp: null
+        labels:
+          app: postgres
+        name: pgbench-data
+        namespace: pg1
+        selfLink: /api/v1/namespaces/pg1/persistentvolumeclaims/pgbench-data
+        type: PersistentVolumeClaim
+        uid: 393d3ce0-bc3e-46d1-87c5-32ee346667f1
+      params:
+        scalepercentage: "100"
+    state: approved
+status: {}
