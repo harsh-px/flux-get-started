@@ -1,0 +1,53 @@
+apiVersion: autopilot.libopenstorage.org/v1alpha1
+kind: AutopilotRuleObject
+metadata:
+  annotations:
+    fluxcd.io/sync-checksum: cbfaea1c8dc562a047fd5818a40919021019b862
+  creationTimestamp: null
+  labels:
+    fluxcd.io/sync-gc-mark: sha256.N78MBSEANAnkPDCdlQMSp8UcPjAZOOhfFd7R7liC5ug
+    rule: pool-rebalance
+  name: e570eadb-555e-41f2-8b05-fabd7717437c
+  ownerReferences:
+  - apiVersion: autopilot.libopenstorage.org/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: AutopilotRule
+    name: pool-rebalance
+    uid: b167b073-dd58-4097-ba5c-d7f45fd98eec
+  uid: ddd12028-a193-4533-805b-10ec9f63dd00
+spec:
+  actionApprovals:
+  - action:
+      expectedResult: "Error: following pools are still above threshold: 4af50815-8b9d-4ccb-939f-df7e9905f312.
+        Following pools are still under threshold: ffe2920c-8ccc-4b97-b40a-dae13040cd19,e570eadb-555e-41f2-8b05-fabd7717437c\nWork
+        summary:\n\nRebalance actions:\n\nadd replica\n\tVolume: 443639616480197746
+        \n\tPool: ffe2920c-8ccc-4b97-b40a-dae13040cd19 \n\tNode: c07e8b1c-ebf7-4eb5-b79c-185901da93f2
+        \n\tReplication set ID: 0 \n\tStart: 2020-05-28T00:52:03.355804325Z End: (timestamp:
+        nil Timestamp)\n\tWork summary:\n\t\t-> UnbalancedProvisionedSpaceBytes    9663676416
+        done, 0 pending\n\t\t-> UnbalancedVolumes                  1 done, 0 pending\n\nremove
+        replica\n\tVolume: 443639616480197746 \n\tPool: 4af50815-8b9d-4ccb-939f-df7e9905f312
+        \n\tNode: c6d3882e-c8d8-41d2-bfac-3c7b6e0cd67a \n\tReplication set ID: 0 \n\tStart:
+        2020-05-28T00:52:03.355805275Z End: (timestamp: nil Timestamp)\n\tWork summary:\n\t\t->
+        UnbalancedProvisionedSpaceBytes    9663676416 done, 0 pending\n\t\t-> UnbalancedVolumes
+        \                 1 done, 0 pending\n\nadd replica\n\tVolume: 34854947928731640
+        \n\tPool: e570eadb-555e-41f2-8b05-fabd7717437c \n\tNode: 46285b42-8b07-4a0f-b825-b9b4df7859cc
+        \n\tReplication set ID: 0 \n\tStart: 2020-05-28T00:52:03.813250155Z End: (timestamp:
+        nil Timestamp)\n\tWork summary:\n\t\t-> UnbalancedProvisionedSpaceBytes    9663676416
+        done, 0 pending\n\t\t-> UnbalancedVolumes                  1 done, 0 pending\n\nremove
+        replica\n\tVolume: 34854947928731640 \n\tPool: 4af50815-8b9d-4ccb-939f-df7e9905f312
+        \n\tNode: c6d3882e-c8d8-41d2-bfac-3c7b6e0cd67a \n\tReplication set ID: 0 \n\tStart:
+        2020-05-28T00:52:03.81325114Z End: (timestamp: nil Timestamp)\n\tWork summary:\n\t\t->
+        UnbalancedProvisionedSpaceBytes    9663676416 done, 0 pending\n\t\t-> UnbalancedVolumes
+        \                 1 done, 0 pending\n"
+      name: openstorage.io.action.storagepool/rebalance
+      objectMetadata:
+        annotations:
+          rule: pool-rebalance
+          ruleobject: e570eadb-555e-41f2-8b05-fabd7717437c
+        creationTimestamp: null
+        name: Portworx storage pools
+        type: StoragePool
+      params: {}
+    state: approved
+status: {}
