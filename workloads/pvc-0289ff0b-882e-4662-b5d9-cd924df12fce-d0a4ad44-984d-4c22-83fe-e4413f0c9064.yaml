@@ -1,0 +1,41 @@
+apiVersion: autopilot.libopenstorage.org/v1alpha1
+kind: AutopilotRuleObject
+metadata:
+  creationTimestamp: null
+  labels:
+    rule: ut-vol-resize-rule
+  name: pvc-0289ff0b-882e-4662-b5d9-cd924df12fce
+  ownerReferences:
+  - apiVersion: autopilot.libopenstorage.org/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: AutopilotRule
+    name: ut-vol-resize-rule
+    uid: 814c2986-ee0f-4b96-8488-c2a2ce05d9cf
+spec:
+  actionApprovals:
+  - action:
+      expectedResult: PVC will resize from 10 GiB to 20 GiB
+      name: openstorage.io.action.volume/resize
+      objectMetadata:
+        annotations:
+          rule: ut-vol-resize-rule
+          ruleobject: pvc-0289ff0b-882e-4662-b5d9-cd924df12fce
+        creationTimestamp: null
+        labels:
+          type: db
+        name: postgres-data
+        namespace: db
+        ownerReferences:
+        - apiVersion: apps/v1
+          controller: true
+          kind: Deployment
+          name: postgres
+          uid: ""
+        type: PersistentVolumeClaim
+        uid: pvc-0289ff0b-882e-4662-b5d9-cd924df12fce
+      params:
+        maxsize: 400Gi
+        scalepercentage: "100"
+    state: approved
+status: {}
