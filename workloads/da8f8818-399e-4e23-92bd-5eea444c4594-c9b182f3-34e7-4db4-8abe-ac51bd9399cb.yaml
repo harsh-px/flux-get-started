@@ -1,0 +1,48 @@
+apiVersion: autopilot.libopenstorage.org/v1alpha1
+kind: AutopilotRuleObject
+metadata:
+  creationTimestamp: null
+  labels:
+    rule: pool-rebalance
+  name: da8f8818-399e-4e23-92bd-5eea444c4594
+  ownerReferences:
+  - apiVersion: autopilot.libopenstorage.org/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: AutopilotRule
+    name: pool-rebalance
+    uid: 2fcc1698-4a97-4aa2-976f-3f4236fa2276
+  uid: b5299810-49d8-4ce4-ba47-0bbd493c46c6
+spec:
+  actionApprovals:
+  - action:
+      expectedResult: "Work summary:\n\nRebalance actions:\n\nadd replica\n\tVolume:
+        1152731952087921482 \n\tPool: da8f8818-399e-4e23-92bd-5eea444c4594 \n\tNode:
+        218462c7-0543-47a8-af06-9e44d89da497 \n\tReplication set ID: 0 \n\tStart:
+        2020-06-09T20:32:42.059710032Z End: (timestamp: nil Timestamp)\n\tWork summary:\n\t\t->
+        UnbalancedProvisionedSpaceBytes    32212254720 done, 0 pending\n\t\t-> UnbalancedVolumes
+        \                 1 done, 0 pending\n\nremove replica\n\tVolume: 1152731952087921482
+        \n\tPool: da9771af-d325-48f4-b42d-040a5b952171 \n\tNode: 97f131dd-9e5b-431a-96f9-1c9a9c301478
+        \n\tReplication set ID: 0 \n\tStart: 2020-06-09T20:32:42.059710761Z End: (timestamp:
+        nil Timestamp)\n\tWork summary:\n\t\t-> UnbalancedProvisionedSpaceBytes    32212254720
+        done, 0 pending\n\t\t-> UnbalancedVolumes                  1 done, 0 pending\n\nadd
+        replica\n\tVolume: 741568352796226165 \n\tPool: 15d2875e-f420-4929-85bf-9a31640514a9
+        \n\tNode: 5e6af7d5-7a58-4a19-89ab-19f9136764bc \n\tReplication set ID: 0 \n\tStart:
+        2020-06-09T20:32:42.188107311Z End: (timestamp: nil Timestamp)\n\tWork summary:\n\t\t->
+        UnbalancedProvisionedSpaceBytes    32212254720 done, 0 pending\n\t\t-> UnbalancedVolumes
+        \                 1 done, 0 pending\n\nremove replica\n\tVolume: 741568352796226165
+        \n\tPool: da9771af-d325-48f4-b42d-040a5b952171 \n\tNode: 97f131dd-9e5b-431a-96f9-1c9a9c301478
+        \n\tReplication set ID: 0 \n\tStart: 2020-06-09T20:32:42.188108879Z End: (timestamp:
+        nil Timestamp)\n\tWork summary:\n\t\t-> UnbalancedProvisionedSpaceBytes    32212254720
+        done, 0 pending\n\t\t-> UnbalancedVolumes                  1 done, 0 pending\n"
+      name: openstorage.io.action.storagepool/rebalance
+      objectMetadata:
+        annotations:
+          rule: pool-rebalance
+          ruleobject: da8f8818-399e-4e23-92bd-5eea444c4594
+        creationTimestamp: null
+        name: Portworx storage pools
+        type: StoragePool
+      params: null
+    state: approved
+status: {}
