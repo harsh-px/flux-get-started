@@ -7,7 +7,6 @@ metadata:
     rule: volume-resize
   name: volume-resize-pvc-9de7d1a3-cd38-4d90-a54e-a458fce31ace
   namespace: pg1
-  uid: 78a3f146-9808-42f9-9d58-cee49a586878
 spec:
   actions:
   - name: resize
