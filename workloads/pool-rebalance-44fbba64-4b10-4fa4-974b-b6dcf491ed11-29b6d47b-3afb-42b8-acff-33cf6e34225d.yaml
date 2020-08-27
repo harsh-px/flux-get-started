@@ -1,0 +1,19 @@
+apiVersion: autopilot.libopenstorage.org/v1alpha1
+kind: ActionApproval
+metadata:
+  creationTimestamp: null
+  labels:
+    object: 44fbba64-4b10-4fa4-974b-b6dcf491ed11
+    rule: pool-rebalance
+  name: pool-rebalance-44fbba64-4b10-4fa4-974b-b6dcf491ed11
+  namespace: kube-system
+spec:
+  actions:
+  - name: rebalance
+    params: null
+  approvalState: approved
+status:
+  Rule:
+    Name: pool-rebalance
+    Namespace: ""
+  lastProcessTimestamp: "2020-08-27T19:39:22Z"
