@@ -1,0 +1,44 @@
+apiVersion: autopilot.libopenstorage.org/v1alpha1
+kind: ActionApproval
+metadata:
+  creationTimestamp: null
+  finalizers:
+  - autopilot.libopenstorage.org/delete
+  labels:
+    object: pvc-07858e2c-6208-473d-81df-130c8157f66d
+    rule: volume-resize
+  name: volume-resize-pvc-07858e2c-6208-473d-81df-130c8157f66d
+  namespace: pg1
+spec:
+  actions:
+  - name: resize
+    params:
+      maxsize: 400Gi
+      scalepercentage: "100"
+  approvalState: approved
+status:
+  Rule:
+    Name: volume-resize
+    Namespace: ""
+  actionPreviews:
+  - action:
+      name: resize
+      params:
+        maxsize: 400Gi
+        scalepercentage: "100"
+    expectedResult:
+      Message: PVC will resize from 10Gi to 20Gi
+    involvedObjects:
+    - apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: pgbench-data
+      namespace: pg1
+      ownerReferences:
+      - apiVersion: apps/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: ReplicaSet
+        name: pgbench-7f64fc8444
+        uid: 7c878856-fcaa-4f6b-ad44-135caacdeeb6
+      uid: pvc-07858e2c-6208-473d-81df-130c8157f66d
+  lastProcessTimestamp: "2020-08-28T01:53:43Z"
