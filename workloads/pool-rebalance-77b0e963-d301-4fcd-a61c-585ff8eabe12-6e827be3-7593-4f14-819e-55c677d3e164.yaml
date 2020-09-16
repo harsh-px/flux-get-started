@@ -1,0 +1,75 @@
+apiVersion: autopilot.libopenstorage.org/v1alpha1
+kind: ActionApproval
+metadata:
+  creationTimestamp: null
+  finalizers:
+  - autopilot.libopenstorage.org/delete
+  labels:
+    object: 77b0e963-d301-4fcd-a61c-585ff8eabe12
+    rule: pool-rebalance
+  name: pool-rebalance-77b0e963-d301-4fcd-a61c-585ff8eabe12
+  namespace: kube-system
+spec:
+  actions:
+  - name: rebalance
+    params: null
+  approvalState: approved
+status:
+  Rule:
+    Name: pool-rebalance
+    Namespace: ""
+  actionPreviews:
+  - action:
+      name: rebalance
+      params: null
+    expectedResult:
+      Message: "Job summary:\n    -> Provisioned space balanced         0 B done,
+        20 GiB pending\n\nRebalance actions:\n\nReplica add action\n    Volume: 707851116921728756
+        \n    Pool: ca52a350-0301-414c-b648-726c595cd03b \n    Node: 9d2621df-fcbe-44eb-9000-5c26967e9034
+        \n    Replication set ID: 0 \n    Work summary:\n        -> Provisioned space
+        balanced         0 B done, 10 GiB pending\n        -> Volume replicas balanced
+        \          0 done, 1 pending\n\nReplica remove action\n    Volume: 707851116921728756
+        \n    Pool: 77b0e963-d301-4fcd-a61c-585ff8eabe12 \n    Node: ce276088-deae-467f-9af5-023a9675fe28
+        \n    Replication set ID: 0 \n    Work summary:\n        -> Provisioned space
+        balanced         0 B done, 10 GiB pending\n        -> Volume replicas balanced
+        \          0 done, 1 pending\n\nReplica add action\n    Volume: 600272710877241324
+        \n    Pool: 5424a70e-f727-4100-a8c7-9a28e10729c2 \n    Node: 9e52a4ed-9ff6-4595-adf2-63c536213990
+        \n    Replication set ID: 0 \n    Work summary:\n        -> Provisioned space
+        balanced         0 B done, 10 GiB pending\n        -> Volume replicas balanced
+        \          0 done, 1 pending\n\nReplica remove action\n    Volume: 600272710877241324
+        \n    Pool: 77b0e963-d301-4fcd-a61c-585ff8eabe12 \n    Node: ce276088-deae-467f-9af5-023a9675fe28
+        \n    Replication set ID: 0 \n    Work summary:\n        -> Provisioned space
+        balanced         0 B done, 10 GiB pending\n        -> Volume replicas balanced
+        \          0 done, 1 pending\n"
+    involvedObjects:
+    - apiVersion: ""
+      kind: StoragePool
+      name: ca52a350-0301-414c-b648-726c595cd03b
+      namespace: kube-system
+      ownerReferences:
+      - apiVersion: ""
+        kind: ""
+        name: 'portworx cluster: harsh-pks-demo-41'
+        uid: 460d690b-b226-4ed9-bb7b-e6eb68de8b1a
+      uid: ca52a350-0301-414c-b648-726c595cd03b
+    - apiVersion: ""
+      kind: StoragePool
+      name: 77b0e963-d301-4fcd-a61c-585ff8eabe12
+      namespace: kube-system
+      ownerReferences:
+      - apiVersion: ""
+        kind: ""
+        name: 'portworx cluster: harsh-pks-demo-41'
+        uid: 460d690b-b226-4ed9-bb7b-e6eb68de8b1a
+      uid: 77b0e963-d301-4fcd-a61c-585ff8eabe12
+    - apiVersion: ""
+      kind: StoragePool
+      name: 5424a70e-f727-4100-a8c7-9a28e10729c2
+      namespace: kube-system
+      ownerReferences:
+      - apiVersion: ""
+        kind: ""
+        name: 'portworx cluster: harsh-pks-demo-41'
+        uid: 460d690b-b226-4ed9-bb7b-e6eb68de8b1a
+      uid: 5424a70e-f727-4100-a8c7-9a28e10729c2
+  lastProcessTimestamp: "2020-09-16T03:36:03Z"
